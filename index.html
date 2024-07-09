@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.O.A.T Customs - Jack Of All Trades</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .logo {
+            max-width: 300px;
+            margin-top: 20px;
+        }
+
+        .neon-text {
+            font-size: 3em;
+            font-weight: bold;
+            color: #fff;
+            animation: neon-flicker 3s infinite alternate;
+        }
+
+        .subheader {
+            font-size: 1.5em;
+            color: #fff;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff;
+        }
+
+        @keyframes neon-flicker {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+                text-shadow: 
+                    0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 20px #FF3131,
+                    0 0 30px #FF3131,
+                    0 0 40px #FF3131;
+            }
+            33% {
+                text-shadow: 
+                    0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 20px #fffd01,
+                    0 0 30px #fffd01,
+                    0 0 40px #fffd01;
+            }
+            66% {
+                text-shadow: 
+                    0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 20px #FF5F1F,
+                    0 0 30px #FF5F1F,
+                    0 0 40px #FF5F1F;
+            }
+            20%, 24%, 55% {       
+                text-shadow: none;
+            }
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        nav p {
+            text-align: center;
+            margin: 0;
+            padding-bottom: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 5px 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #FF5F1F;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px 0;
+        }
+
+        .gallery div {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            border: 5px solid transparent;
+            animation: neon-box-flicker 3s infinite alternate;
+        }
+
+        @keyframes neon-box-flicker {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+                border-color: #FF3131;
+                box-shadow: 
+                    0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 20px #FF3131,
+                    0 0 30px #FF3131,
+                    0 0 40px #FF3131;
+            }
+            33% {
+                border-color: #fffd01;
+                box-shadow: 
+                    0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 20px #fffd01,
+                    0 0 30px #fffd01,
+                    0 0 40px #fffd01;
+            }
+            66% {
+                border-color: #FF5F1F;
+                box-shadow: 
+                    0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 20px #FF5F1F,
+                    0 0 30px #FF5F1F,
+                    0 0 40px #FF5F1F;
+            }
+            20%, 24%, 55% {       
+                border-color: transparent;
+                box-shadow: none;
+            }
+        }
+
+        .gallery h3, .gallery p {
+            color: #fff;
+            text-shadow: none;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .gallery a {
+            display: block;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="neon-text">J.O.A.T Customs</h1>
+        <p class="subheader">Jack of All Trades</p>
+        <img src="joat_customs_logo.png" alt="J.O.A.T Customs Logo" class="logo">
+    </header>
+
+    <nav>
+        <p>Jump To Item:</p>
+        <ul>
+            <li><a href="#shirts-hoodies">Shirts/Hoodies</a></li>
+            <li><a href="#tumblers">Tumblers</a></li>
+            <li><a href="#coffee-cups">Coffee Cups</a></li>
+            <li><a href="#candles">Candles</a></li>
+            <li><a href="#perfumes">Perfumes</a></li>
+            <li><a href="#face-masks">Face Masks</a></li>
+            <li><a href="#puzzles">Puzzles</a></li>
+            <li><a href="#magnets">Magnets</a></li>
+            <li><a href="#stickers">Stickers</a></li>
+            <li><a href="#car-decals">Car Window Decals</a></li>
+            <li><a href="#bumper-stickers">Bumper Stickers</a></li>
+            <li><a href="#paintings">Paintings</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="home">
+            <h2>Welcome to J.O.A.T Customs</h2>
+            <p>Discover our unique custom creations - from apparel to accessories and beyond.</p>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <div id="shirts-hoodies">
+                <a href="shirts.html">
+                    <h3>Shirts/Hoodies</h3>
+                    <img src="shirt1.jpg" alt="Custom Shirt">
+                </a>
+            </div>
+            <div id="tumblers">
+                <a href="tumblers.html">
+                    <h3>Tumblers</a>
+                    <img src="tumbler1.jpg" alt="Custom Tumbler">
+                </a>
+            </div>
+            <div id="coffee-cups">
+                <a href="coffee-cups.html">
+                    <h3>Coffee Cups</h3>
+                    <img src="coffee-cup1.jpg" alt="Custom Coffee Cup">
+                </a>
+            </div>
+            <div id="candles">
+                <a href="candles.html">
+                    <h3>Candles</h3>
+                    <img src="candle1.jpg" alt="Custom Candle">
+                </a>
+            </div>
+            <div id="perfumes">
+                <a href="perfumes.html">
+                    <h3>Perfumes</h3>
+                    <img src="perfume1.jpg" alt="Custom Perfume">
+                </a>
+            </div>
+            <div id="face-masks">
+                <a href="face-masks.html">
+                    <h3>Face Masks</h3>
+                    <img src="facemask1.jpg" alt="Custom Face Mask">
+                </a>
+            </div>
+            <div id="puzzles">
+                <a href="puzzles.html">
+                    <h3>Puzzles</h3>
+                    <img src="puzzle1.jpg" alt="Custom Puzzle">
+                </a>
+            </div>
+            <div id="magnets">
+                <a href="magnets.html">
+                    <h3>Magnets</h3>
+                    <img src="magnet1.jpg" alt="Custom Magnet">
+                </a>
+            </div>
+            <div id="stickers">
+                <a href="stickers.html">
+                    <h3>Stickers</h3>
+                    <img src="sticker1.jpg" alt="Custom Sticker">
+                </a>
+            </div>
+            <div id="car-decals">
+                <a href="car-decals.html">
+                    <h3>Car Window Decals</h3>
+                    <img src="cardecal1.jpg" alt="Custom Car Window Decal">
+                </a>
+            </div>
+            <div id="bumper-stickers">
+                <a href="bumper-stickers.html">
+                    <h3>Bumper Stickers</h3>
+                    <img src="bumpersticker1.jpg" alt="Custom Bumper Sticker">
+                </a>
+            </div>
+            <div id="paintings">
+                <a href="paintings.html">
+                    <h3>Paintings</h3>
+                    <img src="painting1.jpg" alt="Custom Painting">
+                </a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>J.O.A.T Customs - Jack Of All Trades. We specialize in creating unique, custom pieces that reflect your style and personality.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <p>Interested in a custom piece? Contact us at: info@joatcustoms.com</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 J.O.A.T Customs. All rights reserved.</p>
+    </footer>
+</body>
+</html>
