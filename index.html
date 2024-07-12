@@ -142,8 +142,9 @@
         .gallery {
             display: grid;
             grid-template-columns: repeat(2, 1fr); /* 2 columns */
-            gap: 2in 1in; /* 2 inches vertical, 1 inch horizontal */
+            gap: 1.5in 1in; /* 1.5 inches vertical, 1 inch horizontal */
             padding: 40px 0;
+            justify-items: center;
         }
 
         .gallery div {
@@ -153,7 +154,8 @@
             position: relative;
             overflow: hidden;
             border: 5px solid transparent;
-            height: calc(200px - 0.5in); /* Half an inch smaller */
+            height: 200px; /* Keep the original height */
+            width: 200px; /* Keep the original width */
             animation: neon-box-flicker 3s infinite alternate;
         }
 
@@ -198,8 +200,18 @@
             padding: 0;
             z-index: 1;
             position: relative;
-            font-size: 4vw; /* Adjust font size */
+            font-size: 2vw; /* Reduce font size */
             text-align: center;
+            animation: text-breath 4s infinite;
+        }
+
+        @keyframes text-breath {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
         }
 
         .gallery a {
@@ -219,6 +231,14 @@
 
         #home, #about, #contact {
             text-align: center;
+        }
+
+        .bold-text {
+            font-weight: bold;
+        }
+
+        .underline-text {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -250,7 +270,7 @@
     <div class="container">
         <section id="home">
             <h2>Welcome to J.O.A.T Customs</h2>
-            <p>Discover our unique custom creations - from apparel to accessories and beyond.</p>
+            <p class="bold-text">Discover our unique custom creations - from apparel to accessories and beyond.</p>
         </section>
 
         <section id="gallery" class="gallery">
@@ -318,12 +338,12 @@
 
         <section id="about">
             <h2>- About -</h2>
-            <p>J.O.A.T Customs specializes in creating unique, custom pieces that reflect your style and personality.</p>
+            <p class="bold-text">J.O.A.T Customs specializes in creating unique, custom pieces that reflect your style and personality.</p>
         </section>
 
         <section id="contact">
             <h2>Get in Touch</h2>
-            <p>Interested in a custom piece? Contact: JOATCustoms.biz@gmail.com</p>
+            <p class="bold-text">Interested in a custom piece? Contact: <span class="underline-text">JOATCustoms.biz@gmail.com</span></p>
         </section>
     </div>
 
