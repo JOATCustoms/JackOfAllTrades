@@ -21,6 +21,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
 
         header {
@@ -155,8 +156,8 @@
             position: relative;
             overflow: hidden;
             border: 5px solid transparent;
-            height: 200px; /* Keep the original height */
-            width: 200px; /* Keep the original width */
+            height: 200px; /* Set height */
+            width: 200px; /* Set width */
             animation: neon-box-flicker 3s infinite alternate;
         }
 
@@ -201,7 +202,7 @@
             padding: 0;
             z-index: 1;
             position: relative;
-            font-size: 4vw; /* Adjust font size */
+            font-size: 2vw; /* Set font size */
             text-align: center;
             animation: text-breath 4s infinite;
         }
@@ -240,6 +241,17 @@
 
         .underline-text {
             text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(1, 1fr); /* 1 column */
+                gap: 1in; /* Reduced gap for smaller screens */
+            }
+
+            .gallery h3 {
+                font-size: 4vw; /* Increase font size for mobile */
+            }
         }
     </style>
 </head>
