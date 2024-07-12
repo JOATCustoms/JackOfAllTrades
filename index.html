@@ -21,6 +21,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
 
         header {
@@ -142,7 +143,7 @@
 
         .gallery {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust to 2 columns for larger screens and 1 for smaller */
             gap: 1.5in 1in; /* 1.5 inches vertical, 1 inch horizontal */
             padding: 40px 0;
             justify-items: center;
@@ -327,7 +328,7 @@
             </div>
             <div id="bumper-stickers">
                 <a href="bumper-stickers.html">
-                    <h3>Bumper Stickers</h3>
+                    <h3>Bumper Stickers</a>
                 </a>
             </div>
             <div id="paintings">
