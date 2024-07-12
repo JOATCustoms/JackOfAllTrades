@@ -21,6 +21,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
 
         header {
@@ -201,7 +202,7 @@
             padding: 0;
             z-index: 1;
             position: relative;
-            font-size: 2vw; /* Reduce font size */
+            font-size: 3vw; /* Increase font size */
             text-align: center;
             animation: text-breath 4s infinite;
         }
@@ -240,12 +241,6 @@
 
         .underline-text {
             text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            .gallery {
-                grid-template-columns: 1fr; /* 1 column for mobile view */
-            }
         }
     </style>
 </head>
