@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.O.A.T Customs - Jack Of All Trades</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .logo {
+            max-width: 250px;
+            width: 100%;
+            margin: 5px auto;
+        }
+
+        .neon-text {
+            font-size: 7vw;
+            font-weight: bold;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 0;
+            letter-spacing: 0.7vw;
+            width: 100%;
+            animation: neon-flicker 5s infinite;
+        }
+
+        @keyframes neon-flicker {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+                text-shadow: 
+                    0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 20px #FF3131,
+                    0 0 30px #FF3131,
+                    0 0 40px #FF3131;
+            }
+            20%, 24%, 55% {       
+                text-shadow: none;
+            }
+            33%, 36%, 39%, 42%, 45% {
+                text-shadow: 
+                    0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 20px #FFD700,  /* Adjusted yellow */
+                    0 0 30px #FFD700,  /* Adjusted yellow */
+                    0 0 40px #FFD700;  /* Adjusted yellow */
+            }
+            66%, 69%, 72%, 75%, 78% {
+                text-shadow: 
+                    0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 20px #FF8C00,
+                    0 0 30px #FF8C00,
+                    0 0 40px #FF8C00;
+            }
+        }
+
+        .subheader {
+            font-size: 2.5vw;
+            color: #fff;
+            margin-top: 5px;
+            letter-spacing: 0.3vw;
+            width: 100%;
+            animation: neon-breath 4s infinite;
+        }
+
+        @keyframes neon-breath {
+            0%, 100% {
+                text-shadow: 
+                    0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 20px #fff,
+                    0 0 30px #fff,
+                    0 0 40px #fff;
+            }
+            50% {
+                text-shadow: 
+                    0 0 2px #fff,
+                    0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 15px #fff,
+                    0 0 20px #fff;
+            }
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        nav p {
+            text-align: center;
+            margin: 0;
+            padding-bottom: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 5px 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #FF5F1F;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            gap: 1.5in 1in; /* 1.5 inches vertical, 1 inch horizontal */
+            padding: 40px 0;
+            justify-items: center;
+        }
+
+        .gallery div {
+            background-color: #000; /* Change background to black */
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            border: 5px solid transparent;
+            height: 200px; /* Keep the original height */
+            width: 200px; /* Keep the original width */
+            animation: neon-box-flicker 3s infinite alternate;
+        }
+
+        @keyframes neon-box-flicker {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+                border-color: #FF3131;
+                box-shadow: 
+                    0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 20px #FF3131,
+                    0 0 30px #FF3131,
+                    0 0 40px #FF3131;
+            }
+            33% {
+                border-color: #FFD700;  /* Adjusted yellow */
+                box-shadow: 
+                    0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 20px #FFD700,  /* Adjusted yellow */
+                    0 0 30px #FFD700,  /* Adjusted yellow */
+                    0 0 40px #FFD700;  /* Adjusted yellow */
+            }
+            66% {
+                border-color: #FF8C00;
+                box-shadow: 
+                    0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 20px #FF8C00,
+                    0 0 30px #FF8C00,
+                    0 0 40px #FF8C00;
+            }
+            20%, 24%, 55% {       
+                border-color: transparent;
+                box-shadow: none;
+            }
+        }
+
+        .gallery h3 {
+            color: #fff;
+            font-family: 'Roboto', sans-serif; /* Use a professional font */
+            margin: 0;
+            padding: 0;
+            z-index: 1;
+            position: relative;
+            font-size: 4vw; /* Adjust font size */
+            text-align: center;
+            animation: text-breath 4s infinite;
+        }
+
+        @keyframes text-breath {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .gallery a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+        }
+
+        #home, #about, #contact {
+            text-align: center;
+        }
+
+        .bold-text {
+            font-weight: bold;
+        }
+
+        .underline-text {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="neon-text">J.O.A.T Customs</h1>
+        <img src="joat_customs_logo.png" alt="J.O.A.T Customs Logo" class="logo">
+        <p class="subheader">Jack of All Trades</p>
+    </header>
+
+    <nav>
+        <p>Jump To Item:</p>
+        <ul>
+            <li><a href="shirts.html">Shirts/Hoodies</a></li>
+            <li><a href="tumblers.html">Tumblers</a></li>
+            <li><a href="coffee-cups.html">Coffee Cups</a></li>
+            <li><a href="candles.html">Candles</a></li>
+            <li><a href="perfumes.html">Perfumes</a></li>
+            <li><a href="face-masks.html">Face Masks</a></li>
+            <li><a href="puzzles.html">Puzzles</a></li>
+            <li><a href="magnets.html">Magnets</a></li>
+            <li><a href="stickers.html">Stickers</a></li>
+            <li><a href="car-decals.html">Car Window Decals</a></li>
+            <li><a href="bumper-stickers.html">Bumper Stickers</a></li>
+            <li><a href="paintings.html">Paintings</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="home">
+            <h2>Welcome to J.O.A.T Customs</h2>
+            <p class="bold-text">Discover our unique custom creations - from apparel to accessories and beyond.</p>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <div id="shirts-hoodies">
+                <a href="shirts.html">
+                    <h3>Shirts/Hoodies</h3>
+                </a>
+            </div>
+            <div id="tumblers">
+                <a href="tumblers.html">
+                    <h3>Tumblers</h3>
+                </a>
+            </div>
+            <div id="coffee-cups">
+                <a href="coffee-cups.html">
+                    <h3>Coffee Cups</h3>
+                </a>
+            </div>
+            <div id="candles">
+                <a href="candles.html">
+                    <h3>Candles</h3>
+                </a>
+            </div>
+            <div id="perfumes">
+                <a href="perfumes.html">
+                    <h3>Perfumes</h3>
+                </a>
+            </div>
+            <div id="face-masks">
+                <a href="face-masks.html">
+                    <h3>Face Masks</h3>
+                </a>
+            </div>
+            <div id="puzzles">
+                <a href="puzzles.html">
+                    <h3>Puzzles</h3>
+                </a>
+            </div>
+            <div id="magnets">
+                <a href="magnets.html">
+                    <h3>Magnets</h3>
+                </a>
+            </div>
+            <div id="stickers">
+                <a href="stickers.html">
+                    <h3>Stickers</h3>
+                </a>
+            </div>
+            <div id="car-decals">
+                <a href="car-decals.html">
+                    <h3>Car Window Decals</h3>
+                </a>
+            </div>
+            <div id="bumper-stickers">
+                <a href="bumper-stickers.html">
+                    <h3>Bumper Stickers</h3>
+                </a>
+            </div>
+            <div id="paintings">
+                <a href="paintings.html">
+                    <h3>Paintings</h3>
+                </a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>- About -</h2>
+            <p class="bold-text">J.O.A.T Customs specializes in creating unique, custom pieces that reflect your style and personality.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <p class="bold-text">Interested in a custom piece? Contact: <span class="underline-text">JOATCustoms.biz@gmail.com</span></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 J.O.A.T Customs. All rights reserved.</p>
+    </footer>
+</body>
+</html>
