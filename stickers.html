@@ -10,71 +10,95 @@
             background-color: #000000;
             color: #ffffff;
             margin: 0;
-            padding: 20px;
-            text-align: center;
+            padding: 0;
+            line-height: 1.6;
         }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
-        }
-        h1 {
-            text-align: center;
-        }
-        .sticker-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
             padding: 20px;
         }
-        .sticker-item {
-            background-color: #1a1a1a;
-            border-radius: 10px;
-            padding: 10px;
+
+        header {
             text-align: center;
+            padding: 10px 0;
         }
-        .sticker-image {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .gallery img {
+            max-width: 200px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+        }
+
+        .back-link {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-link:hover {
+            color: #FF5F1F;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <header>
         <h1>Stickers</h1>
-        <div class="sticker-grid">
-            <div class="sticker-item">
-                <img src="20240714_124635.jpg" alt="Detroit Sticker" class="sticker-image">
-            </div>
-            <div class="sticker-item">
-                <img src="20240714_124638.jpg" alt="Detroit Skyline Sticker" class="sticker-image">
-            </div>
-            <div class="sticker-item">
-                <img src="20240714_124718.jpg" alt="Made in Detroit Sticker" class="sticker-image">
-            </div>
-            <div class="sticker-item">
-                <img src="20240714_124721.jpg" alt="Made in Detroit Circle Sticker" class="sticker-image">
-            </div>
-            <div class="sticker-item">
-                <img src="20240714_124725.jpg" alt="Pink Cat Sticker" class="sticker-image">
-            </div>
-            <div class="sticker-item">
-                <img src="20240714_124731.jpg" alt="Mayonnaise Sticker" class="sticker-image">
-            </div>
-            <div class="sticker-item">
-                <img src="20240714_124734.jpg" alt="Cat Meow Sticker" class="sticker-image">
-            </div>
-            <div class="sticker-item">
-                <img src="20240714_124737.jpg" alt="Sloth Sticker" class="sticker-image">
-            </div>
-            <div class="sticker-item">
-                <img src="20240714_124740.jpg" alt="Peace Sign Flag Sticker" class="sticker-image">
-            </div>
-            <div class="sticker-item">
-                <img src="20240714_124743.jpg" alt="Coffee Cup Sticker" class="sticker-image">
-            </div>
-            <!-- Add more sticker items here following the same pattern -->
+    </header>
+
+    <div class="container">
+        <div class="gallery">
+            <!-- Images will be dynamically loaded here -->
+            <img src="Stickers/20240714_124635.jpg" alt="Sticker 1">
+            <img src="Stickers/20240714_124638.jpg" alt="Sticker 2">
+            <img src="Stickers/20240714_124718.jpg" alt="Sticker 3">
+            <img src="Stickers/20240714_124721.jpg" alt="Sticker 4">
+            <img src="Stickers/20240714_124725.jpg" alt="Sticker 5">
+            <img src="Stickers/20240714_124731.jpg" alt="Sticker 6">
+            <img src="Stickers/20240714_124734.jpg" alt="Sticker 7">
+            <img src="Stickers/20240714_124737.jpg" alt="Sticker 8">
+            <img src="Stickers/20240714_124740.jpg" alt="Sticker 9">
+            <img src="Stickers/20240714_124743.jpg" alt="Sticker 10">
+            <img src="Stickers/20240714_124752.jpg" alt="Sticker 11">
+            <img src="Stickers/20240714_124755.jpg" alt="Sticker 12">
+            <img src="Stickers/20240714_124759.jpg" alt="Sticker 13">
+            <img src="Stickers/20240714_124802.jpg" alt="Sticker 14">
+            <img src="Stickers/20240714_124805.jpg" alt="Sticker 15">
+            <img src="Stickers/20240714_124809.jpg" alt="Sticker 16">
+            <img src="Stickers/20240714_124814.jpg" alt="Sticker 17">
+            <img src="Stickers/20240714_124818.jpg" alt="Sticker 18">
+            <img src="Stickers/20240714_124822.jpg" alt="Sticker 19">
+            <img src="Stickers/20240714_124826.jpg" alt="Sticker 20">
+            <img src="Stickers/20240714_124830.jpg" alt="Sticker 21">
+            <img src="Stickers/20240714_124838.jpg" alt="Sticker 22">
+            <img src="Stickers/20240714_124847.jpg" alt="Sticker 23">
+            <img src="Stickers/20240714_124900.jpg" alt="Sticker 24">
+            <img src="Stickers/20240714_124905.jpg" alt="Sticker 25">
+            <img src="Stickers/20240714_124907.jpg" alt="Sticker 26">
+            <img src="Stickers/20240714_130221.jpg" alt="Sticker 27">
         </div>
+        <a href="index.html" class="back-link">Back to Home</a>
     </div>
+
+    <footer>
+        <p>&copy; 2024 J.O.A.T Customs. All rights reserved.</p>
+    </footer>
 </body>
 </html>
