@@ -243,15 +243,15 @@
             text-decoration: underline;
         }
 
-        /* Fix for mobile centering issue */
+        /* Fix for mobile centering and overlapping issue */
         @media (max-width: 768px) {
             .gallery {
                 display: grid;
-                grid-template-columns: repeat(2, minmax(0, 1fr)); /* Two equal columns */
-                gap: 1in; /* Adjust gap if necessary */
-                justify-items: center; /* Ensure items are centered */
-                padding-left: 10px; /* Add small padding to the left */
-                padding-right: 10px; /* Add small padding to the right */
+                grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+                gap: 20px; /* Increase gap to prevent overlap */
+                justify-items: center;
+                padding-left: 10px;
+                padding-right: 10px;
             }
 
             .gallery h3 {
