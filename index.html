@@ -144,8 +144,8 @@
         .gallery {
             display: grid;
             grid-template-columns: repeat(2, 1fr); /* 2 columns */
-            gap: 1.5in 1in; /* 1.5 inches vertical, 1 inch horizontal */
-            padding: 40px 0;
+            gap: 20px; /* Increase spacing */
+            padding: 20px;
             justify-items: center;
         }
 
@@ -159,6 +159,7 @@
             height: 200px;
             width: 200px;
             animation: neon-box-flicker 3s infinite alternate;
+            box-sizing: border-box; /* Ensure padding and border are included in width/height */
         }
 
         @keyframes neon-box-flicker {
@@ -243,15 +244,12 @@
             text-decoration: underline;
         }
 
-        /* Fix for mobile centering and overlapping issue */
+        /* Fix for mobile centering and layout issue */
         @media (max-width: 768px) {
             .gallery {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-                gap: 20px; /* Increase gap to prevent overlap */
-                justify-items: center;
-                padding-left: 10px;
-                padding-right: 10px;
+                grid-template-columns: repeat(2, minmax(0, 1fr)); /* Two equal columns within screen width */
+                gap: 15px; /* Adjust gap to prevent overlap */
+                padding: 20px 10px; /* Add padding for smaller screens */
             }
 
             .gallery h3 {
