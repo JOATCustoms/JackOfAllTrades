@@ -11,7 +11,7 @@
             color: #ffffff;
             margin: 0;
             padding: 20px;
-            text-align: center; /* Center the text */
+            text-align: center;
         }
         .container {
             max-width: 1200px;
@@ -20,20 +20,69 @@
         h1 {
             text-align: center;
         }
-        .item-image {
-            width: 100%;
-            max-width: 400px;
-            margin: 20px auto;
-            display: block;
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .gallery img {
+            max-width: 200px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        a {
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Tumblers</h1>
-        <p>Coming Soon</p>
-        <img src="path-to-your-image.jpg" alt="" class="item-image">
-        <!-- Add more images and descriptions as needed -->
+        <div class="gallery">
+            <!-- Adding clickable tumbler images -->
+            <a href="Tumblers/20240714_124635.jpg" data-lightbox="gallery">
+                <img src="Tumblers/20240714_124635.jpg" alt="Tumbler 1">
+            </a>
+            <a href="Tumblers/20240714_124638.jpg" data-lightbox="gallery">
+                <img src="Tumblers/20240714_124638.jpg" alt="Tumbler 2">
+            </a>
+            <a href="Tumblers/20240714_124718.jpg" data-lightbox="gallery">
+                <img src="Tumblers/20240714_124718.jpg" alt="Tumbler 3">
+            </a>
+            <a href="Tumblers/20240714_124721.jpg" data-lightbox="gallery">
+                <img src="Tumblers/20240714_124721.jpg" alt="Tumbler 4">
+            </a>
+            <a href="Tumblers/20240714_124725.jpg" data-lightbox="gallery">
+                <img src="Tumblers/20240714_124725.jpg" alt="Tumbler 5">
+            </a>
+            <a href="Tumblers/20240714_124731.jpg" data-lightbox="gallery">
+                <img src="Tumblers/20240714_124731.jpg" alt="Tumbler 6">
+            </a>
+            <a href="Tumblers/20240714_124734.jpg" data-lightbox="gallery">
+                <img src="Tumblers/20240714_124734.jpg" alt="Tumbler 7">
+            </a>
+            <a href="Tumblers/20240714_124737.jpg" data-lightbox="gallery">
+                <img src="Tumblers/20240714_124737.jpg" alt="Tumbler 8">
+            </a>
+            <a href="Tumblers/20240714_124740.jpg" data-lightbox="gallery">
+                <img src="Tumblers/20240714_124740.jpg" alt="Tumbler 9">
+            </a>
+            <a href="Tumblers/20240714_124743.jpg" data-lightbox="gallery">
+                <img src="Tumblers/20240714_124743.jpg" alt="Tumbler 10">
+            </a>
+            <a href="Tumblers/20240714_124752.jpg" data-lightbox="gallery">
+                <img src="Tumblers/20240714_124752.jpg" alt="Tumbler 11">
+            </a>
+            <a href="Tumblers/20240714_124755.jpg" data-lightbox="gallery">
+                <img src="Tumblers/20240714_124755.jpg" alt="Tumbler 12">
+            </a>
+            <a href="Tumblers/20240714_124759.jpg" data-lightbox="gallery">
+                <img src="Tumblers/20240714_124759.jpg" alt="Tumbler 13">
+            </a>
+        </div>
+        <a href="index.html" class="back-link">Back to Home</a>
     </div>
 </body>
 </html>
