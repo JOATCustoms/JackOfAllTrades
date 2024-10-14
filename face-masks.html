@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Face Masks - J.O.A.T Customs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -11,7 +12,7 @@
             color: #ffffff;
             margin: 0;
             padding: 20px;
-            text-align: center; /* Center the text */
+            text-align: center;
         }
         .container {
             max-width: 1200px;
@@ -20,20 +21,47 @@
         h1 {
             text-align: center;
         }
-        .item-image {
-            width: 100%;
-            max-width: 400px;
-            margin: 20px auto;
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .gallery img {
+            max-width: 200px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+        }
+        .back-link {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
             display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-link:hover {
+            color: #FF5F1F;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Face Masks</h1>
-        <p>Coming Soon</p>
-        <img src="path-to-your-image.jpg" alt="" class="item-image">
-        <!-- Add more images and descriptions as needed -->
+        <div class="gallery">
+            <a href="Face-masks/20240714_001.jpg" data-lightbox="face-masks" data-title="Face Mask 1"><img src="Face-masks/20240714_001.jpg" alt="Face Mask 1"></a>
+            <a href="Face-masks/20240714_002.jpg" data-lightbox="face-masks" data-title="Face Mask 2"><img src="Face-masks/20240714_002.jpg" alt="Face Mask 2"></a>
+            <a href="Face-masks/20240714_003.jpg" data-lightbox="face-masks" data-title="Face Mask 3"><img src="Face-masks/20240714_003.jpg" alt="Face Mask 3"></a>
+            <a href="Face-masks/20240714_004.jpg" data-lightbox="face-masks" data-title="Face Mask 4"><img src="Face-masks/20240714_004.jpg" alt="Face Mask 4"></a>
+            <a href="Face-masks/20240714_005.jpg" data-lightbox="face-masks" data-title="Face Mask 5"><img src="Face-masks/20240714_005.jpg" alt="Face Mask 5"></a>
+            <a href="Face-masks/20240714_006.jpg" data-lightbox="face-masks" data-title="Face Mask 6"><img src="Face-masks/20240714_006.jpg" alt="Face Mask 6"></a>
+            <a href="Face-masks/20240714_007.jpg" data-lightbox="face-masks" data-title="Face Mask 7"><img src="Face-masks/20240714_007.jpg" alt="Face Mask 7"></a>
+            <a href="Face-masks/20240714_008.jpg" data-lightbox="face-masks" data-title="Face Mask 8"><img src="Face-masks/20240714_008.jpg" alt="Face Mask 8"></a>
+            <a href="Face-masks/20240714_009.jpg" data-lightbox="face-masks" data-title="Face Mask 9"><img src="Face-masks/20240714_009.jpg" alt="Face Mask 9"></a>
+            <a href="Face-masks/20240714_010.jpg" data-lightbox="face-masks" data-title="Face Mask 10"><img src="Face-masks/20240714_010.jpg" alt="Face Mask 10"></a>
+        </div>
+        <a href="index.html" class="back-link">Back to Home</a>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>
